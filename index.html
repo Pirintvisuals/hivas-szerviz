@@ -257,6 +257,24 @@
     font-variant-numeric: tabular-nums;
   }
 
+
+  /* céges hivatkozás: halkabb, mint a hívás gomb, hogy ne versenyezzen vele */
+  .site {
+    margin: 2.25rem 0 0;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+
+  .site a {
+    color: var(--dim);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2px;
+    transition: color .2s ease, border-color .2s ease;
+  }
+
+  .site a:hover { color: var(--cream); border-bottom-color: var(--muted); }
+
   /* ============================================================
      SZAKASZOK
      ============================================================ */
@@ -502,6 +520,12 @@
       grid-column: 2; grid-row: 3;
       margin-top: 0.85rem;
     }
+    .closing .site {
+      grid-column: 1 / -1;
+      grid-row: 4;
+      margin-top: 2.75rem;
+      text-align: left;
+    }
   }
 
   @media (min-width: 90rem) {
@@ -674,6 +698,10 @@
     <p class="cta-note">
       <span class="num">06 70 250 1739</span>
       Pirint Milán
+    </p>
+
+    <p class="site">
+      <a href="https://www.landscale.agency/hu" target="_blank" rel="noopener">landscale.agency</a>
     </p>
   </section>
 
